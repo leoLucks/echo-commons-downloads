@@ -1,5 +1,7 @@
 {
   "version": "v0.2.0",
-  "packages": {},
+  "packages": {
+    "android": "https://github.com/leoLucks/echo-commons/releases/download/v0.2.0/echo-commons-v0.2.0-android.apk"
+  },
   "localPackages": false
 }
