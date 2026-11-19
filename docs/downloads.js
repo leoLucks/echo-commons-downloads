@@ -28,8 +28,17 @@ async function showInstaller(entry, channels) {
   }
   if (!href) return
   const link = entry.querySelector('a')
-  link.href = href
-  link.setAttribute('download', filename)
+  const destination = new URL(href)
+  if (destination.origin === 'https://github.com' &&
+      destination.pathname.startsWith('/leoLucks/echo-commons/releases/download/')) {
+    const login = new URL('/login', destination.origin)
+    login.searchParams.set('return_to', destination.pathname)
+    link.href = login.href
+    link.textContent = `登录后下载 ${extension.toUpperCase()}`
+  } else {
+    link.href = href
+    link.setAttribute('download', filename)
+  }
   link.hidden = false
   entry.querySelector('.package-status').hidden = true
 }
@@ -40,7 +49,7 @@ async function showChannels() {
     const response = await fetch('./channels.json', { cache: 'no-cache' })
     if (response.ok) channels = await response.json()
   } catch {
-    // The player link is still available from the self-hosted site.
+    // The Node.js installation link is also available without the manifest.
   }
   if (typeof channels.version === 'string' && channels.version) {
     const version = document.querySelector('[data-version]')
