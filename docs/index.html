@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f6f2">
+  <meta name="description" content="查看回声仓安装方式和各平台发行状态，下载 Node.js 自托管版。">
+  <title>回声仓｜官网与下载</title>
+  <link rel="icon" href="./echo-commons-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./cd-scroll-top.css">
+  <link rel="stylesheet" href="./site.css">
+  <script type="module" src="./downloads.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-bar page-width">
+      <a class="brand" href="#top">
+        <img src="./echo-commons-mark.svg" width="34" height="34" alt="">
+        <span>回声仓<span class="brand-english" lang="en">Echo Commons</span></span>
+      </a>
+      <nav aria-label="官网导航">
+        <a href="#install">下载与安装</a>
+        <a class="header-player" href="https://github.com/leoLucks/echo-commons/releases/tag/v0.2.0">发行说明</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-width" id="top" tabindex="-1">
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="hero-copy">
+        <h1 id="intro-title">你的歌单，<br>随身听。</h1>
+        <p>在电脑和手机上听歌、整理歌单。<br>登录同一个账号，就能同步收藏。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#install">下载安装包 <span aria-hidden="true">↓</span></a>
+          <a class="button button-plain" href="https://github.com/leoLucks/echo-commons/releases/tag/v0.2.0">查看 v0.2.0 发行说明</a>
+        </div>
+      </div>
+      <figure class="hero-art">
+        <span class="album-disc" aria-hidden="true"></span>
+        <div class="album-case">
+          <img src="./pwa-512x512.png" width="512" height="512" alt="回声仓品牌唱片封面" fetchpriority="high">
+        </div>
+        <figcaption><span>回声仓《Echo Commons》</span><time datetime="2026">2026</time></figcaption>
+      </figure>
+    </section>
+
+    <section class="install" id="install" aria-labelledby="install-title">
+      <div class="install-intro">
+        <h2 id="install-title">下载安装包</h2>
+        <p class="release-status" data-version hidden></p>
+      </div>
+
+      <section class="node-release" aria-labelledby="node-release-title">
+        <div>
+          <h3 id="node-release-title">Node.js 自托管版</h3>
+          <p>需要 Node.js 22.13 或更高版本。解压后运行 <code>node server/start.mjs</code>。</p>
+          <p>下载需要登录有私有仓库访问权限的 GitHub 账号。</p>
+        </div>
+        <a class="button button-download" href="https://github.com/leoLucks/echo-commons/releases/download/v0.2.0/echo-commons-node.tar.gz">下载 TAR.GZ</a>
+      </section>
+      <ul class="platforms" aria-label="各平台软件包发行状态">
+        <li>
+          <h3>macOS</h3>
+          <div class="platform-download" data-package="macos-arm64" data-extension="dmg">
+            <p class="platform-system">Apple 芯片 · DMG</p>
+            <a class="button button-download" hidden>下载 DMG</a>
+            <p class="package-status">暂未发布</p>
+          </div>
+          <div class="platform-download" data-package="macos-x64" data-extension="dmg">
+            <p class="platform-system">Intel 芯片 · DMG</p>
+            <a class="button button-download" hidden>下载 DMG</a>
+            <p class="package-status">暂未发布</p>
+          </div>
+        </li>
+        <li>
+          <h3>Windows</h3>
+          <div class="platform-download" data-package="windows-x64" data-extension="exe">
+            <p class="platform-system">64 位 · EXE · 个人测试版</p>
+            <a class="button button-download" hidden>下载 EXE</a>
+            <p class="package-status">暂未发布</p>
+          </div>
+        </li>
+        <li>
+          <h3>Android</h3>
+          <div class="platform-download" data-package="android" data-extension="apk">
+            <p class="platform-system">Android 7 或更新版本 · APK</p>
+            <a class="button button-download" hidden>下载 APK</a>
+            <p class="package-status">暂未发布</p>
+          </div>
+        </li>
+        <li>
+          <h3>iPhone 和 iPad</h3>
+          <div class="platform-download">
+            <p class="platform-system">iOS、iPadOS</p>
+            <p class="package-status">等待签名与发行</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="page-width"><span>回声仓</span><span lang="en">Echo Commons</span></footer>
+  <button class="record-top cd-scroll-button" type="button" aria-label="回到顶部" title="回到顶部" hidden>
+    <span class="cd-scroll-deck" aria-hidden="true">
+      <span class="cd-scroll-face"></span>
+      <span class="cd-scroll-front"></span>
+      <span class="cd-scroll-platter">
+        <span class="cd-scroll-disc"><span class="cd-scroll-record"></span></span>
+        <span class="cd-scroll-hub"></span>
+      </span>
+      <span class="cd-scroll-needle">
+        <span class="cd-scroll-arm">
+          <span class="cd-scroll-cartridge"><span class="cd-scroll-stylus"></span></span>
+        </span>
+      </span>
+    </span>
+  </button>
+</body>
+</html>
