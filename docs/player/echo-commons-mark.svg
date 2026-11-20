@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">回声仓</title>
+  <rect width="512" height="512" rx="88" fill="#f2eadc"/>
+  <circle cx="256" cy="256" r="192" fill="#15130f"/>
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#3f3b34" stroke-width="3"/>
+  <circle cx="256" cy="256" r="112" fill="none" stroke="#3f3b34" stroke-width="3"/>
+  <circle cx="256" cy="256" r="72" fill="#f05a28"/>
+  <circle cx="256" cy="256" r="16" fill="#f2eadc"/>
+  <path d="M81 135h108v30H81zM323 347h108v30H323z" fill="#d9ff68"/>
+  <path d="M369 83v122" stroke="#1746d1" stroke-width="26"/>
+</svg>

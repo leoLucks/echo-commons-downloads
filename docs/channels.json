@@ -1,10 +1,10 @@
 {
   "version": "v0.2.0",
   "packages": {
-    "android": "https://github.com/leoLucks/echo-commons/releases/download/v0.2.0/echo-commons-v0.2.0-android.apk",
-    "macos-arm64": "https://github.com/leoLucks/echo-commons/releases/download/v0.2.0/echo-commons-v0.2.0-macos-arm64.dmg",
-    "macos-x64": "https://github.com/leoLucks/echo-commons/releases/download/v0.2.0/echo-commons-v0.2.0-macos-x64.dmg",
-    "windows-x64": "https://github.com/leoLucks/echo-commons/releases/download/v0.2.0/echo-commons-v0.2.0-windows-x64.exe"
+    "android": "https://github.com/leoLucks/echo-commons-downloads/releases/download/v0.2.0/echo-commons-v0.2.0-android.apk",
+    "macos-arm64": "https://github.com/leoLucks/echo-commons-downloads/releases/download/v0.2.0/echo-commons-v0.2.0-macos-arm64.dmg",
+    "macos-x64": "https://github.com/leoLucks/echo-commons-downloads/releases/download/v0.2.0/echo-commons-v0.2.0-macos-x64.dmg",
+    "windows-x64": "https://github.com/leoLucks/echo-commons-downloads/releases/download/v0.2.0/echo-commons-v0.2.0-windows-x64.exe"
   },
   "localPackages": false
 }
