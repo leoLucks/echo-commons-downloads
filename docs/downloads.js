@@ -46,7 +46,7 @@ async function showInstaller(entry, channels) {
 async function showChannels() {
   let channels = {}
   try {
-    const response = await fetch('./channels.json', { cache: 'no-cache' })
+    const response = await fetch('./channels.json?v=3', { cache: 'no-store' })
     if (response.ok) channels = await response.json()
   } catch {
     // The Node.js installation link is also available without the manifest.
