@@ -318,3 +318,73 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* 回声仓官网：以播放器的黑胶界面为基础。 */
+:root {
+  color-scheme: dark;
+  --paper: #080808;
+  --ink: #f5f4f0;
+  --muted: #aaa9a4;
+  --rule: #30302e;
+  --blue: #b8dcca;
+  --deep-blue: #d4d3ce;
+  --wash: #181818;
+}
+
+body { background: var(--paper); }
+.site-header { background: #080808ed; backdrop-filter: blur(16px); }
+.brand img { border-radius: 7px; }
+.site-bar .header-player { border-radius: 999px; }
+.site-bar nav a:hover { color: #fff; }
+.hero { grid-template-columns: 1fr 1fr; min-height: 590px; gap: clamp(32px, 6vw, 96px); padding-block: 72px 90px; }
+.hero-kicker { display: inline-flex; align-items: center; gap: 9px; color: #b8dcca; font-size: 13px; font-weight: 650; }
+.hero-kicker::before { width: 7px; height: 7px; background: #b8dcca; border-radius: 50%; content: ''; }
+.hero h1 { margin-top: 24px; font-size: clamp(48px, 5.2vw, 76px); letter-spacing: -.055em; line-height: 1.18; }
+.hero p { margin: 24px 0 32px; color: #b9b9b5; font-size: clamp(15px, 1.3vw, 18px); }
+.hero-actions { gap: 10px; }
+.button { border-radius: 999px; padding-inline: 21px; }
+.button-primary { color: #101411; background: #c2e4d3; }
+.button-primary:hover { background: #e0f3e9; }
+.button-secondary { color: #f5f4f0; background: #242424; border: 1px solid #41413e; }
+.button-secondary:hover { background: #333; }
+.hero-art { aspect-ratio: 1.12; overflow: hidden; background: #191b1a; border: 1px solid #313431; border-radius: 22px; }
+.hero-art::before { position: absolute; inset: 0; background: radial-gradient(ellipse at 75% 20%, #3e554c, transparent 51%), radial-gradient(ellipse at 12% 80%, #4b3232, transparent 50%); content: ''; }
+.album-case { z-index: 1; top: 47%; left: 12%; width: 44%; padding: 0; overflow: hidden; transform: translateY(-50%) rotate(-8deg); border: 1px solid #ffffff40; border-radius: 4px; box-shadow: 0 16px 35px #0009; }
+.album-case img { width: 100%; }
+.album-disc { top: 47%; left: 37%; width: 53%; border: 1px solid #646865; background: radial-gradient(circle, #eeeade 0 2%, #c36a4e 2.5% 13%, #272727 13.5% 14%, transparent 14.5%), repeating-radial-gradient(circle, #1c1d1c 0 2px, #343634 3px 4px); box-shadow: 9px 13px 32px #0009; }
+.hero-art figcaption { bottom: 21px; color: #d5ddd6; }
+.hero-art figcaption span:last-child { color: #a2b3a6; }
+.install { padding-block: 44px 54px; }
+.install-intro { margin-bottom: 25px; }
+.install h2 { font-size: clamp(30px, 3vw, 40px); }
+.release-status { color: #b8dcca !important; }
+.platforms { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; border: 0; }
+.platforms li, .platforms li:nth-child(3n + 1), .platforms li:not(:nth-child(3n + 1)), .platforms li:nth-child(n + 4) { padding: 23px; background: #181818; border: 1px solid #30302e; border-radius: 16px; }
+.platforms li h3 { margin-bottom: 12px; color: #f3f2ef; font-size: 19px; }
+.platforms li:nth-child(2) h3 { color: #b3c1fb; }
+.platforms li:nth-child(3) h3 { color: #edb78b; }
+.platforms li:nth-child(4) h3 { color: #cdb6e6; }
+.platforms .platform-system { margin: 8px 0; color: #d1d0cc; font-size: 13px; }
+.platforms li > p, .platform-download > p:not(.platform-system) { color: #aaa9a4; font-size: 12px; }
+.platform-download + .platform-download { margin-top: 20px; padding-top: 16px; border-top: 1px solid #30302e; }
+.button-download { min-height: 40px; margin-top: 6px; color: #f1f0ed; border: 1px solid #555550; font-size: 13px; }
+.button-download:hover { color: #101411; border-color: #c2e4d3; background: #c2e4d3; }
+.node-release { padding: 20px 24px; margin: 20px 0 0; background: #111; border: 1px solid #30302e; border-radius: 14px; }
+.node-release h3 { color: #ddd; font-size: 15px; }
+.node-release p { font-size: 12px; }
+footer { padding-top: 24px; }
+
+@media (max-width: 1000px) {
+  .platforms { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .hero { min-height: 0; grid-template-columns: 1fr; gap: 30px; padding-block: 38px 50px; }
+  .hero h1 { margin-top: 18px; font-size: clamp(43px, 10vw, 62px); }
+  .hero p { margin: 18px 0 25px; }
+  .hero-art { aspect-ratio: 1.22; border-radius: 16px; }
+  .install { padding-top: 33px; }
+  .platforms { grid-template-columns: 1fr; gap: 10px; }
+  .platforms li, .platforms li:nth-child(3n + 1), .platforms li:not(:nth-child(3n + 1)), .platforms li:nth-child(n + 4) { padding: 20px; }
+  .node-release { padding: 18px 20px; }
+}

@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f6f2">
+  <meta name="theme-color" content="#080808">
   <meta name="description" content="在浏览器直接打开回声仓，或下载 Windows、macOS 和 Android 安装包。">
   <title>回声仓｜官网与下载</title>
   <link rel="icon" href="./echo-commons-mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./cd-scroll-top.css">
-  <link rel="stylesheet" href="./site.css">
+  <link rel="stylesheet" href="./site.css?v=4">
   <script type="module" src="./downloads.js?v=3"></script>
 </head>
 <body>
@@ -28,20 +28,20 @@
   <main class="page-width" id="top" tabindex="-1">
     <section class="hero" aria-labelledby="intro-title">
       <div class="hero-copy">
-        <h1 id="intro-title">你的歌单，<br>随身听。</h1>
-        <p>在电脑和手机上听歌、整理歌单。<br>登录同一个账号，就能同步收藏。</p>
+        <span class="hero-kicker">音乐，留在你身边</span>
+        <h1 id="intro-title">把喜欢的歌，<br>放进回声仓。</h1>
+        <p>听歌、收藏、整理歌单。<br>在不同设备上，继续你的音乐时刻。</p>
         <div class="hero-actions">
           <a class="button button-primary" href="./player/">打开网页版 <span aria-hidden="true">↗</span></a>
-          <a class="button button-primary" href="#install">下载安装包 <span aria-hidden="true">↓</span></a>
-          <a class="button button-plain" href="https://github.com/leoLucks/echo-commons-downloads/releases/tag/v0.2.1">查看 v0.2.1 发行说明</a>
+          <a class="button button-secondary" href="#install">下载安装包 <span aria-hidden="true">↓</span></a>
         </div>
       </div>
       <figure class="hero-art">
         <span class="album-disc" aria-hidden="true"></span>
         <div class="album-case">
-          <img src="./pwa-512x512.png" width="512" height="512" alt="回声仓品牌唱片封面" fetchpriority="high">
+          <img src="./fantasy.jpg" width="674" height="772" alt="周杰伦戴红色兜帽的照片" fetchpriority="high">
         </div>
-        <figcaption><span>回声仓《Echo Commons》</span><time datetime="2026">2026</time></figcaption>
+        <figcaption><span>周杰伦《范特西》</span><time datetime="2001">2001</time></figcaption>
       </figure>
     </section>
 
@@ -51,14 +51,6 @@
         <p class="release-status" data-version hidden></p>
       </div>
 
-      <section class="node-release" aria-labelledby="node-release-title">
-        <div>
-          <h3 id="node-release-title">Node.js 自托管版</h3>
-          <p>需要 Node.js 22.13 或更高版本。解压后运行 <code>node server/start.mjs</code>。</p>
-          <p>安装包为私有预览版。请用有回声仓仓库访问权限的 GitHub 账号登录，登录后进入对应的下载地址。</p>
-        </div>
-        <a class="button button-download" href="https://github.com/login?return_to=%2FleoLucks%2Fecho-commons%2Freleases%2Fdownload%2Fv0.2.1%2Fecho-commons-node.tar.gz">登录后下载 TAR.GZ</a>
-      </section>
       <ul class="platforms" aria-label="各平台软件包发行状态">
         <li>
           <h3>macOS</h3>
@@ -100,6 +92,14 @@
           </div>
         </li>
       </ul>
+      <section class="node-release" aria-labelledby="node-release-title">
+        <div>
+          <h3 id="node-release-title">Node.js 自托管版</h3>
+          <p>需要 Node.js 22.13 或更高版本。解压后运行 <code>node server/start.mjs</code>。</p>
+          <p>私有预览版，请使用有仓库访问权限的 GitHub 账号登录下载。</p>
+        </div>
+        <a class="button button-download" href="https://github.com/login?return_to=%2FleoLucks%2Fecho-commons%2Freleases%2Fdownload%2Fv0.2.1%2Fecho-commons-node.tar.gz">登录后下载 TAR.GZ</a>
+      </section>
     </section>
   </main>
 
